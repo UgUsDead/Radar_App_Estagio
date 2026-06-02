@@ -1,0 +1,42 @@
+# Node / Next
+node_modules/
+**/node_modules/
+.next/
+**/.next/
+dist/
+**/dist/
+build/
+**/build/
+.cache/
+**/.cache/
+.parcel-cache/
+**/.parcel-cache/
+.vite/
+**/.vite/
+
+# Python
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+**/.venv/
+**/venv/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env (keep examples)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Secrets
+local-radar-stack/backend/firebase-service-account.json

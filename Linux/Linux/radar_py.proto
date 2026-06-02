@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+
+
+message Target {
+    bytes tid = 1 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+
+    bytes posX = 2 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes posY = 3 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes posZ = 4 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes velX = 5 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes velY = 6 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes velZ = 7 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes accX = 8 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes accY = 9 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes accZ = 10 [(nanopb).max_size = 4, (nanopb).fixed_length = true];    
+    bytes conf = 11 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+
+    bytes has_height = 12 [(nanopb).max_size = 1, (nanopb).fixed_length = true];
+
+    bytes minZ = 13 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+    bytes maxZ = 14 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+}
+
+
+
+message RadarMessage {
+    bytes frame_number = 1 [(nanopb).max_size = 4, (nanopb).fixed_length = true];
+
+    repeated Target targets = 2 [(nanopb).max_count = 16];
+}

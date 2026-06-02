@@ -1,0 +1,256 @@
+WiFi data
+sta.ssid
+sta.bssid
+1ap.ssid
+ jap.ssid
+=Psta.ssid
+bssid.set
+wifi_prov
+I (%lu) %s: APP_EVT_WIFI_CONNECTED
+I (%lu) %s: APP_EVT_MQTT_CONNECTED
+W (%lu) %s: APP_EVT_MQTT_DISCONNECTED
+E (%lu) %s: APP_EVT_MQTT_ERROR
+network_prov_mgr_reset_wifi_provisioning()
+I (%lu) %s: MQTT config/set: %.*s
+I (%lu) %s: MQTT cmd: %.*s
+I (%lu) %s: MQTT data on other topic: %.*s
+mqtt://10.10.128.175:1883
+esp_mqtt_client_start(s_mqtt)
+./main/mqtt.c
+I (%lu) %s: MQTT start -> %s
+SSID     : %s
+Password : %s
+{"ver":"%s","name":"%s","transport":"%s","network":"wifi"}
+esp_wifi_set_mode(WIFI_MODE_STA)
+esp_wifi_start()
+esp_wifi_init(&cfg)
+network_prov_mgr_is_wifi_provisioned(&provisioned)
+esp_event_handler_register(WIFI_EVENT, ESP_EVENT_ANY_ID, &event_handler, NULL)
+mqtt_client
+MQTT_EVENTS
+E (%lu) %s: Not support this mqtt scheme %s
+E (%lu) %s: %s: mqtt_message_receive() returned %d
+W (%lu) %s: Connection refused, bad username or password
+E (%lu) %s: %s: mqtt_get_publish_topic() failed
+E (%lu) %s: %s: mqtt_get_publish_data() failed
+E (%lu) %s: %s: Network timeout while reading MQTT message
+E (%lu) %s: There are no transports valid, stop mqtt client, config scheme = %s
+E (%lu) %s: MQTT connect failed
+E (%lu) %s: MQTT client error, client is in an unrecoverable state.
+E (%lu) %s: Please first enable MQTT_PROTOCOL_5 feature in menuconfig
+mqtt_task
+E (%lu) %s: Error create mqtt task
+E (%lu) %s: Client cannot be stopped from MQTT task
+wifi_scan
+E (%lu) %s: Failed to register WiFi event handler
+network_prov_wifi_connect_tm
+E (%lu) %s: esp_wifi_restore fail, ret is %d
+E (%lu) %s: Failed to set wifi config, 0x%x
+E (%lu) %s: Failed to disconnect wifi, 0x%x
+WIFI_STA_DEF
+E (%lu) %s: Failed to allocate memory for scan result entry SSID
+E (%lu) %s: Failed to allocate memory for scan result entry BSSID
+message->base.descriptor == &cmd_get_wifi_status__descriptor
+TypeCmdApplyWifiConfig
+TypeCmdGetWifiStatus
+TypeCmdSetWifiConfig
+TypeRespApplyWifiConfig
+TypeRespGetWifiStatus
+TypeRespSetWifiConfig
+NETWORK_CONFIG_MSG_TYPE__TypeCmdGetWifiStatus
+NETWORK_CONFIG_MSG_TYPE__TypeRespGetWifiStatus
+NETWORK_CONFIG_MSG_TYPE__TypeCmdSetWifiConfig
+NETWORK_CONFIG_MSG_TYPE__TypeRespSetWifiConfig
+NETWORK_CONFIG_MSG_TYPE__TypeCmdApplyWifiConfig
+NETWORK_CONFIG_MSG_TYPE__TypeRespApplyWifiConfig
+cmd_get_wifi_status
+resp_get_wifi_status
+cmd_set_wifi_config
+resp_set_wifi_config
+cmd_apply_wifi_config
+resp_apply_wifi_config
+wifi_sta_state
+wifi_fail_reason
+wifi_connected
+message->base.descriptor == &cmd_scan_wifi_start__descriptor
+TypeCmdScanWifiResult
+TypeCmdScanWifiStart
+TypeCmdScanWifiStatus
+TypeRespScanWifiResult
+TypeRespScanWifiStart
+TypeRespScanWifiStatus
+NETWORK_SCAN_MSG_TYPE__TypeCmdScanWifiStart
+NETWORK_SCAN_MSG_TYPE__TypeRespScanWifiStart
+NETWORK_SCAN_MSG_TYPE__TypeCmdScanWifiStatus
+NETWORK_SCAN_MSG_TYPE__TypeRespScanWifiStatus
+NETWORK_SCAN_MSG_TYPE__TypeCmdScanWifiResult
+NETWORK_SCAN_MSG_TYPE__TypeRespScanWifiResult
+cmd_scan_wifi_start
+resp_scan_wifi_start
+cmd_scan_wifi_status
+resp_scan_wifi_status
+cmd_scan_wifi_result
+resp_scan_wifi_result
+WiFiScanResult
+message->base.descriptor == &cmd_ctrl_wifi_reset__descriptor
+TypeCmdCtrlWifiReprov
+TypeCmdCtrlWifiReset
+TypeRespCtrlWifiReprov
+TypeRespCtrlWifiReset
+NETWORK_CTRL_MSG_TYPE__TypeCmdCtrlWifiReset
+NETWORK_CTRL_MSG_TYPE__TypeRespCtrlWifiReset
+NETWORK_CTRL_MSG_TYPE__TypeCmdCtrlWifiReprov
+NETWORK_CTRL_MSG_TYPE__TypeRespCtrlWifiReprov
+cmd_ctrl_wifi_reset
+resp_ctrl_wifi_reset
+cmd_ctrl_wifi_reprov
+resp_ctrl_wifi_reprov
+WifiAuthMode
+WIFI_AUTH_MODE__Open
+WIFI_AUTH_MODE__WEP
+WIFI_AUTH_MODE__WPA_PSK
+WIFI_AUTH_MODE__WPA2_PSK
+WIFI_AUTH_MODE__WPA_WPA2_PSK
+WIFI_AUTH_MODE__WPA2_ENTERPRISE
+WIFI_AUTH_MODE__WPA3_PSK
+WIFI_AUTH_MODE__WPA2_WPA3_PSK
+WifiConnectFailedReason
+WIFI_CONNECT_FAILED_REASON__AuthError
+WIFI_CONNECT_FAILED_REASON__WifiNetworkNotFound
+WifiStationState
+WIFI_STATION_STATE__Connected
+WIFI_STATION_STATE__Connecting
+WIFI_STATION_STATE__Disconnected
+WIFI_STATION_STATE__ConnectionFailed
+WifiAttemptFailed
+WifiConnectedState
+ESP_ERR_WIFI_BASE
+ESP_ERR_WIFI_NOT_INIT
+ESP_ERR_WIFI_NOT_STARTED
+ESP_ERR_WIFI_NOT_STOPPED
+ESP_ERR_WIFI_IF
+ESP_ERR_WIFI_MODE
+ESP_ERR_WIFI_STATE
+ESP_ERR_WIFI_CONN
+ESP_ERR_WIFI_NVS
+ESP_ERR_WIFI_MAC
+ESP_ERR_WIFI_SSID
+ESP_ERR_WIFI_PASSWORD
+ESP_ERR_WIFI_TIMEOUT
+ESP_ERR_WIFI_WAKE_FAIL
+ESP_ERR_WIFI_WOULD_BLOCK
+ESP_ERR_WIFI_NOT_CONNECT
+ESP_ERR_WIFI_POST
+ESP_ERR_WIFI_INIT_STATE
+ESP_ERR_WIFI_STOP_STATE
+ESP_ERR_WIFI_NOT_ASSOC
+ESP_ERR_WIFI_TX_DISALLOW
+ESP_ERR_WIFI_TWT_FULL
+ESP_ERR_WIFI_TWT_SETUP_TIMEOUT
+ESP_ERR_WIFI_TWT_SETUP_TXFAIL
+ESP_ERR_WIFI_TWT_SETUP_REJECT
+ESP_ERR_WIFI_DISCARD
+ESP_ERR_WIFI_ROC_IN_PROGRESS
+ESP_ERR_WIFI_REGISTRAR
+ESP_ERR_WIFI_WPS_TYPE
+ESP_ERR_WIFI_WPS_SM
+ESP_ERR_MESH_WIFI_NOT_START
+WIFI_NMI
+WIFI_BB
+.local
+E (%lu) %s: %s: NVS has not been initialized. Call nvs_flash_init before starting WiFi/BT.
+wifi_init
+WIFI_EVENT
+wifi_init_default
+I (%lu) %s: esp_wifi_internal_set_sta_ip failed with %d
+E (%lu) %s: esp_wifi_get_mac failed with %d
+E (%lu) %s: esp_wifi_register_if_rxcb for if=%p failed with %d
+E (%lu) %s: Failed to create wifi interface handle
+//IDF/components/esp_wifi/src/wifi_default.c
+esp_netif_attach_wifi_ap(netif)
+/IDF/components/esp_wifi/src/wifi_default.c
+esp_wifi_set_default_wifi_ap_handlers()
+esp_netif_attach_wifi_station(netif)
+esp_wifi_set_default_wifi_sta_handlers()
+wifi_netif
+E (%lu) %s: No memory to create a wifi interface handle
+E (%lu) %s: Unknown wifi interface id if=%d
+E (%lu) %s: esp_wifi_internal_reg_rxcb for if=%d failed with %d
+WIFI_AP_DEF
+Unknown Password Identifier
+mqtt_start
+wifi_init_sta
+mqtt_process_receive
+esp_mqtt_handle_transport_read_error
+mqtt_message_receive
+esp_mqtt_connect
+esp_mqtt_set_ssl_transport_properties
+esp_mqtt_client_create_transport
+esp_mqtt_client_set_uri
+esp_mqtt_client_init
+esp_mqtt_set_config
+network_prov_mgr_reset_wifi_sm_state_for_reprovision
+network_prov_mgr_reset_wifi_sm_state_on_failure
+network_prov_mgr_configure_wifi_sta
+network_prov_mgr_get_wifi_disconnect_reason
+network_prov_mgr_get_wifi_remaining_conn_attempts
+network_prov_mgr_get_wifi_state
+network_prov_mgr_wifi_scan_result
+network_prov_mgr_wifi_scan_result_count
+network_prov_mgr_wifi_scan_finished
+network_prov_mgr_wifi_scan_start
+ap.ssid
+WIFI_MESH_EVENT
+B?esp_netif_create_default_wifi_sta
+coex_wifi_channel_get
+addba response cb: bssid change from %02x:%02x:%02x:%02x:%02x:%02x to %02x:%02x:%02x:%02x:%02x:%02x
+wifi nvs cfg alloc out of memory
+invalid wifi nvs key index %d
+wifi stop stage error, stage=%d
+invalid magic number %x, call WIFI_INIT_CONFIG_DEFAULT to init config
+timeout when WiFi un-init, type=%d
+wifi ipc: failed to post wifi task
+failed to post WiFi event=%d ret=%d
+wifi stop stage3: out of memory!
+wifi stop stage2: out of memory!
+wifi stop: out of memory!
+wifi deinit internal: wifi not stop
+failed to get bss for bssid=%02x:%02x:%02x:%02x:%02x:%02x
+create wifi task: failed to create task
+create wifi task: failed to create sem
+create wifi task: failed to create queue
+wifi assert: %d
+wifi certification version: v%d.%d
+wifi firmware version: %s
+connected with %s, aid = %d, channel %d, %s, bssid = %02x:%02x:%02x:%02x:%02x:%02x
+ap_probe_send over, reset wifi status to disassoc
+wifi driver task: %x, prio:%d, stack:%d, core=%d
+wifi osi_nvs_open fail ret=%d
+wifi_nvs_load: index mismatch, i=%d index=%d
+wifi_nvs_load: no mem
+wifi_nvs_set fail, index=%d ret=%d
+wifi_nvs_set: unknow type=%d index=%d
+wifi_nvs_set: wrong value
+wifi_nvs_set: wrong index
+wifi nvs cfg already init
+ioctl: failed to post WiFi task %d
+ioctl: failed to get wifi thread sem
+ioctl_process: wifi thread sem NULL, potential bug, type=%d
+wifi init: invalid config
+Cannot set PMF to optional when in WIFI_AUTH_WPA3_PSK! Setting PMF to required.
+Cannot set PMF to required when in WIFI_AUTH_WPA_WPA2_PSK! Setting PMF to optional.
+password convert fail
+password less than 8
+WPA3 Extended PSK authmodes are now part of WIFI_AUTH_WPA3_PSK and will be deprecated in future
+OWE is enabled, but authmode threshold is %d or password length is %d, making it impossible to connect to an AP with authmode OWE
+Password length is zero, but authmode threshold is %d, making it impossible to connect to an AP with authmode OPEN
+Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2
+OWE is not enabled but threshold is set as WIFI_AUTH_OWE
+init failed to wifi global lock
+Error! Should use default passive scan time parameter for WiFi scan when Bluetooth is enabled!!!!!!
+Error! Should use default active scan time parameter for WiFi scan when Bluetooth is enabled!!!!!!
+create wifi task: queue not null
+create wifi task: task not null
+rc_dout, %d; wifi: %d, %d, %d, %d, bt: %d, %d
+RXDC_RFRX_WIFI, 
+RXDC_RXBB_WIFI, 

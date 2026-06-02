@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "198733960267",
+    "project_id": "radarapp-934ee",
+    "storage_bucket": "radarapp-934ee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:198733960267:android:c563495d0ad13e35f0e9ce",
+        "android_client_info": {
+          "package_name": "com.radarapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZBa27Tk48hI8na42ZHnV7nzr5UznXbqc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
